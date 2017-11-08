@@ -41,7 +41,7 @@ const routes: Routes  = [
     component: BanksComponent
   }, */
   { path: '',
-    redirectTo: '/dashboard',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
