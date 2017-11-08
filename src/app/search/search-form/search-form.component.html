@@ -1,0 +1,22 @@
+<div class="search-form form-inline">
+    <form #form="ngForm"
+        (ngSubmit)="onSubmitHandler(form)"
+        [ngClass]="{'ng-pristine': form.pristine, 'ng-dirty': !form.pristine, 'ng-touched': form.touched, 'ng-untouched': !form.touched,'ng-valid': form.valid, 'ng-invalid': !form.valid, 'ng-submitted': submitted}"
+        novalidate="novalidate">
+        <div class="form-group">
+
+            <input [(ngModel)]="query"
+                id="login-input"
+                class="form-control"
+                type="text"
+                ngControl="login"
+                #loginInput="ngModel"
+                placeholder="search for bank details..."
+                 />
+
+            <button class="btn btn-primary pull-right" type="submit" name="search-button">Search</button>
+        </div>
+
+    </form>
+
+</div>

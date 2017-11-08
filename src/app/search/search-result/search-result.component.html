@@ -1,0 +1,54 @@
+<grid-container bgimage='/assets/img/tbg.png'>
+  <div class="container-fluid text-center dtable mar-b16">
+    <div class="row">
+        <h1>abc</h1>
+      <div class="search-form .col-md-6 .col-md-offset-3 center-block" [query]="query"
+    (onSearchSubmit)="onSearchSubmit($event)"></div>
+    </div>
+  </div>
+</grid-container>
+
+
+<div class="container search-result-component">
+  <div class="row">
+    <div class="col-md-9 col-sm-12">
+
+      <div class="item-list sitem row" *ngFor="let item of results">
+       <div class="col-sm-1  col-xs-2 sround btn btn-info">
+        <div class="add-image"><a href="#" >FB</a></div>
+       </div>
+       <div class="col-sm-10  col-xs-10  desc-box">
+        <div class="add-details jobs-item">
+          <h5 class="company-title "><a routerLink="/banks/{{item.BANK}}">{{item.BANK}}</a></h5>
+          <h4 class="job-title"><a href="job-details.html"> {{item.BRANCH}} </a> branch with IFSC Code <a href="">{{item.IFSC}}</a></h4>
+          <span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> {{item.STATE}} </span> <span class="date"><i class=" icon-clock"> </i>/{{item.DISTRICT}}</span></span>
+          <h4>
+            <small>
+            {{item.ADDRESS}} {{item.CITY}}
+           </small>
+         </h4>
+          <div class="job-actions">
+            <h6><strong>PH: </strong>{{item.CONTACT}}</h6>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-12">
+        <img src="http://via.placeholder.com/232x337" class="img-responsive" alt="Responsive image">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="search-result-wrapper container" *ngIf="!!error">
+    <div class="row">
+        <div class="col-md-12 text-danger text-center">
+            {{error}}
+        </div>
+    </div>
+</div>

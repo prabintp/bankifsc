@@ -1,0 +1,30 @@
+.explore-list{
+  margin: 10px 0;
+}
+.explore-list .explore-item{
+  margin-right: 4px;
+}
+.tag-item{
+font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+padding-right: .9em;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+color: #5A8788;
+background-color: #EBF5F5;
+border-color: #CEEAEA;
+position: relative;
+display: inline-block;
+padding: .4em .5em;
+margin: 2px 2px 2px 0;
+font-size: 11px;
+line-height: 1;
+white-space: nowrap;
+text-decoration: none;
+text-align: center;
+border-width: 1px;
+border-style: solid;
+border-radius: .6em;
+transition: all .15s ease-in-out;
+cursor: pointer;
+zoom: 1.3;
+}

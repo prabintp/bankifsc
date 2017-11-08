@@ -1,0 +1,18 @@
+{
+  "id": "header",
+  "data": {
+    "logoPath": "/content/dam/alcs/pmusa/marlboro/images/marlboro.png",
+    "brandName": "Lorem",
+    "brandPath": "/dashboard",
+    "navMenus": [
+      {
+        "name": "banks",
+        "path": "banks"
+      },
+      {
+        "name": "banks",
+        "path": "banks"
+      }
+    ]
+  }
+}

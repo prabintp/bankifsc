@@ -1,0 +1,9 @@
+.grid-container-component{
+  background-size: cover;
+  width: 100%;
+  min-height: 200px;
+}
+.dtable-cell {
+    display: table-cell;
+    vertical-align: middle;
+}

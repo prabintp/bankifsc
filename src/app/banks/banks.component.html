@@ -1,0 +1,71 @@
+<grid-container bgimage='/assets/img/tbg.png'>
+  <div class="container-fluid text-center dtable">
+    <h1>abc</h1>
+    <div class="row">
+    <!--  <div class="search-form .col-md-6 .col-md-offset-3 center-block" [query]="query"
+    (onSearchSubmit)="onSearchSubmit($event)"></div> -->
+    </div>
+  </div>
+</grid-container>
+
+<div class="container">
+
+  <div class="row">
+      <h4><a href="">{{currentBank}}</a> has branches in {{banks.length}} <strong>{{page}}</strong></h4>
+  </div>
+
+  <div class="row">
+    <div class="explore-list col-md-9 col-sm-12">
+    <div class="row">
+      <input type="text" [(ngModel)]="term">
+    </div>
+    <div class="row">
+      <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks " class="explore-item tag-item">
+        {{bnk}}
+      </div>
+    </div>
+
+    </div>
+
+    <div class="explore-list col-md-3 col-sm-12">
+      <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks" class="explore-item tag-item">
+        {{bnk}}
+      </div>
+    </div>
+
+    <!--  <div class="grid grid-pad">
+        <div *ngFor="let detail of details"  class="col-1-4">
+          <h4>BRANCH: {{detail.BRANCH}}</h4>
+          <h4>CITY: {{detail.CITY}}</h4>
+          <h4>IFSC CODE: {{detail.IFSC}}</h4>
+          <h4>MICR CODE: {{detail.MICRCODE}}</h4>
+          <h4>ADDRESS: {{detail.ADDRESS}}</h4>
+          <h4>CONTACT: {{detail.CONTACT}}</h4>
+
+        </div>
+      </div> -->
+
+      <div class="item-list sitem row" *ngFor="let item of details">
+       <div class="col-sm-1  col-xs-2 sround btn btn-info">
+        <div class="add-image"><a href="#" >FB</a></div>
+       </div>
+       <div class="col-sm-10  col-xs-10  desc-box">
+        <div class="add-details jobs-item">
+          <h5 class="company-title "><a href="#">{{item.BANK}}</a></h5>
+          <h4 class="job-title"><a href="job-details.html"> {{item.BRANCH}} </a> branch with IFSC Code <a href="">{{item.IFSC}}</a></h4>
+          <span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> {{item.STATE}} </span> <span class="date"><i class=" icon-clock"> </i>/{{item.DISTRICT}}</span></span>
+          <h4>
+            <small>
+            {{item.ADDRESS}} {{item.CITY}}
+           </small>
+         </h4>
+          <div class="job-actions">
+            <h6><strong>PH: </strong>{{item.CONTACT}}</h6>
+          </div>
+         </div>
+        </div>
+      </div>
+
+  </div>
+
+</div>
