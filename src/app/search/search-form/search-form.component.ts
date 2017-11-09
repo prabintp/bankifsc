@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 //import { Router, ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
-  selector: 'div.search-form',
+  selector: 'div.search-formdir',
   templateUrl: './search-form.component.html',
   styleUrls: ['../../app.component.css','./search-form.component.css']
 
@@ -33,6 +33,7 @@ export class SearchFormComponent {
               console.error('[Invalid form]:', form);
               return ;
           }
+          console.log(this.query +'div' + form);
           this.onSearchSubmit.emit(this.query);
     }
 

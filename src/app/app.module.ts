@@ -8,18 +8,15 @@ import { AppComponent } from './app.component';
 import { appRouterProviders, routableComponents }   from './app.routes';
 import { SearchFormComponent } from './search/search-form/search-form.component';
 import { GridcontainerComponent } from './gridcontainer/gridcontainer.component';
-//import { DashboardComponent } from './dashboard/dashboard.component';
-// import { SearchResultComponent } from './search/search-result/search-result.component';
-// import { BanksComponent } from './banks/banks.component';
 import { HeaderComponent } from './header/header.component';
-import { BookFilterPipe } from './common/pipes/filter.pipe';
+import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
 
 
 
 @NgModule({
   declarations: [
     AppComponent, SearchFormComponent, GridcontainerComponent, HeaderComponent,
-     routableComponents, BookFilterPipe
+     routableComponents
 
   ],
 
@@ -27,7 +24,8 @@ import { BookFilterPipe } from './common/pipes/filter.pipe';
     BrowserModule,
     appRouterProviders,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2FilterPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

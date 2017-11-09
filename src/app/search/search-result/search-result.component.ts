@@ -44,7 +44,7 @@ export class SearchResultComponent {
         console.log(this.param+'param');*/
 
 
-        this.sub = this.route.paramMap
+        this.sub = this.route.queryParams
             .subscribe((params: any) => {
                 let query = params['qry'];
                 let page = params['page'];
