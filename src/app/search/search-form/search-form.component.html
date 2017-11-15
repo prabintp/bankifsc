@@ -3,7 +3,7 @@
         (ngSubmit)="onSubmitHandler(form)"
         [ngClass]="{'ng-pristine': form.pristine, 'ng-dirty': !form.pristine, 'ng-touched': form.touched, 'ng-untouched': !form.touched,'ng-valid': form.valid, 'ng-invalid': !form.valid, 'ng-submitted': submitted}"
         novalidate="novalidate">
-        <div class="form-group">
+        <div class="form-group-lg">
 
             <input [(ngModel)]="query"
                 name="query"
@@ -15,7 +15,7 @@
                 placeholder="search for bank details..."
                  />
 
-            <button class="btn btn-primary pull-right" type="submit" name="search-button">Search</button>
+            <button class="btn-lg form-control btn-primary" type="submit" name="search-button">Search</button>
         </div>
 
     </form>

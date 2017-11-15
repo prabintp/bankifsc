@@ -12,7 +12,7 @@
 <a routerLink="{{jsonDatas.brandPath}}" routerLinkActive="active" class="navbar-brand logo logo-title">
 
 <span class="logo-icon"><i class="icon icon-search-1 ln-shadow-logo shape-0"></i> </span>
-{{jsonDatas.brandName}}<span>{{jsonDatas.brandName}} </span> </a></div>
+<span>{{jsonDatas.brandName}} </span> </a></div>
 <div class="navbar-collapse collapse">
 <ul class="nav navbar-nav navbar-left">
 <li *ngFor="let nv of jsonDatas.navMenus"><a routerLinkActive="active" routerLink="{{nv.path}}">{{nv.name}}</a></li>

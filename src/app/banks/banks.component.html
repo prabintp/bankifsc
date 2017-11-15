@@ -3,48 +3,35 @@
     <h1>abc</h1>
     <div class="row">
      <div class="search-formdir .col-md-6 .col-md-offset-3 center-block" [query]="query"
-    (onSearchSubmit)="onSearchSubmit($event)"></div>
+    (onSearchSubmit)="onSearchSubmit($event)">
     </div>
   </div>
+</div>
 </grid-container>
-
-<div class="container">
-
-  <div class="row">
+  <div class="container">
+    <div class="row" *ngIf="page!='banks' && page!='details'; else banksearchblock">
       <h4><a href="">{{currentBank}}</a> has branches in {{banks.length}} <strong>{{page}}</strong></h4>
-  </div>
+    </div>
+    <ng-template #banksearchblock>
+    <div class="row mt-1">
+      <h4>Search for banks details with {{banks.length}} <strong>{{page}}</strong></h4>
+    </div>
+    </ng-template>
 
   <div class="row">
+    <div class="explore-list col-md-9 col-sm-12" *ngIf="page!='details'; else detailsblock">
+     <div class="row">
+       <input type="text" [(ngModel)]="term">
+     </div>
+     <div class="row">
+       <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks | filterBy: term" class="explore-item tag-item">
+         {{bnk}}
+       </div>
+     </div>
+    </div>
+
+    <ng-template #detailsblock>
     <div class="explore-list col-md-9 col-sm-12">
-    <div class="row">
-      <input type="text" [(ngModel)]="term">
-    </div>
-    <div class="row">
-      <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks | filterBy: term" class="explore-item tag-item">
-        {{bnk}}
-      </div>
-    </div>
-
-    </div>
-
-    <div class="explore-list col-md-3 col-sm-12">
-      <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks" class="explore-item tag-item">
-        {{bnk}}
-      </div>
-    </div>
-
-    <!--  <div class="grid grid-pad">
-        <div *ngFor="let detail of details"  class="col-1-4">
-          <h4>BRANCH: {{detail.BRANCH}}</h4>
-          <h4>CITY: {{detail.CITY}}</h4>
-          <h4>IFSC CODE: {{detail.IFSC}}</h4>
-          <h4>MICR CODE: {{detail.MICRCODE}}</h4>
-          <h4>ADDRESS: {{detail.ADDRESS}}</h4>
-          <h4>CONTACT: {{detail.CONTACT}}</h4>
-
-        </div>
-      </div> -->
-
       <div class="item-list sitem row" *ngFor="let item of details">
        <div class="col-sm-1  col-xs-2 sround btn btn-info">
         <div class="add-image"><a href="#" >FB</a></div>
@@ -65,6 +52,29 @@
          </div>
         </div>
       </div>
+    </div>
+
+    </ng-template>
+
+    <div class="explore-list col-md-3 col-sm-12">
+      <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks" class="explore-item tag-item">
+        {{bnk}}
+      </div>
+    </div>
+
+    <!--  <div class="grid grid-pad">
+        <div *ngFor="let detail of details"  class="col-1-4">
+          <h4>BRANCH: {{detail.BRANCH}}</h4>
+          <h4>CITY: {{detail.CITY}}</h4>
+          <h4>IFSC CODE: {{detail.IFSC}}</h4>
+          <h4>MICR CODE: {{detail.MICRCODE}}</h4>
+          <h4>ADDRESS: {{detail.ADDRESS}}</h4>
+          <h4>CONTACT: {{detail.CONTACT}}</h4>
+
+        </div>
+      </div> -->
+
+
 
   </div>
 

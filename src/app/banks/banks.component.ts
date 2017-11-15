@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { details, banks,IfscServices } from '../common/services/ifsc.api.service';
-//import { SearchFormComponent } from '../search/search-form/search-form.component';
-//import { GridcontainerComponent } from '../gridcontainer/gridcontainer.component';
-// import { BookFilterPipe } from '../common/pipes/filter.pipe';
 
 const FIRST_PAGE: number = 1;
-//import { Injectable, Pipe, PipeTransform } from '@angular/core';
+
 @Component({
   selector: 'bank-item',
   templateUrl: './banks.component.html',
