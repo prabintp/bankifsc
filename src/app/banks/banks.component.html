@@ -1,29 +1,34 @@
 <grid-container bgimage='/assets/img/tbg.png'>
-  <div class="container-fluid text-center dtable">
-    <h1>abc</h1>
+  <div class="container-fluid text-center">
+
     <div class="row">
-     <div class="search-formdir .col-md-6 .col-md-offset-3 center-block" [query]="query"
+        <h1>abc dnfndsndnfkf  dfkjdkfdf </h1>
+     <div class="search-formdir col-xs-12 col-md-6 col-md-offset-3" [query]="query"
     (onSearchSubmit)="onSearchSubmit($event)">
     </div>
   </div>
 </div>
 </grid-container>
-  <div class="container">
-    <div class="row" *ngIf="page!='banks' && page!='details'; else banksearchblock">
-      <h4><a href="">{{currentBank}}</a> has branches in {{banks.length}} <strong>{{page}}</strong></h4>
-    </div>
-    <ng-template #banksearchblock>
-    <div class="row mt-1">
-      <h4>Search for banks details with {{banks.length}} <strong>{{page}}</strong></h4>
-    </div>
-    </ng-template>
 
-  <div class="row">
+<div class="container bank-component">
     <div class="explore-list col-md-9 col-sm-12" *ngIf="page!='details'; else detailsblock">
      <div class="row">
-       <input type="text" [(ngModel)]="term">
+       <form>
+         <div class="form-group">
+           <label for="searchLabel" *ngIf="page!='banks' && page!='details'; else banksearchblock">
+             <h3>Search by <mark>{{page}}</mark> in <a href="">{{currentBank}}</a></h3>
+           </label>
+           <ng-template #banksearchblock>
+               <label for="searchLabel">
+                <h3>Search for Banks</h3>
+               </label>
+           </ng-template>
+           <input type="text" class="form-control" name="term" placeholder="Start type to filter results..." [(ngModel)]="term">
+         </div>
+       </form>
      </div>
      <div class="row">
+       <p><mark>{{banks.length}}</mark> results</p>
        <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks | filterBy: term" class="explore-item tag-item">
          {{bnk}}
        </div>
@@ -31,29 +36,47 @@
     </div>
 
     <ng-template #detailsblock>
-    <div class="explore-list col-md-9 col-sm-12">
-      <div class="item-list sitem row" *ngFor="let item of details">
-       <div class="col-sm-1  col-xs-2 sround btn btn-info">
-        <div class="add-image"><a href="#" >FB</a></div>
+    <div class="row bank-details">
+    <div class="col-md-9 col-sm-12">
+      <div class="item-list row" *ngFor="let item of details">
+       <div class="col-sm-2  col-xs-12">
+        <div class="add-image sround btn btn-info"><a href="#" >FB</a></div>
        </div>
-       <div class="col-sm-10  col-xs-10  desc-box">
-        <div class="add-details jobs-item">
-          <h5 class="company-title "><a href="#">{{item.BANK}}</a></h5>
-          <h4 class="job-title"><a href="job-details.html"> {{item.BRANCH}} </a> branch with IFSC Code <a href="">{{item.IFSC}}</a></h4>
+
+       <div class="col-sm-10  col-xs-12">
+         <dl class="dl-horizontal">
+            <dt>Bank name:</dt>
+            <dd>{{item.BANK}}</dd>
+            <dt>Branch name:</dt>
+            <dd>{{item.BRANCH}}</dd>
+            <dt>IFSC code:</dt>
+            <dd>{{item.IFSC}}</dd>
+            <dt>MICR code:</dt>
+            <dd>{{item.MICR}}</dd>
+            <dt>State:</dt>
+            <dd>{{item.STATE}}</dd>
+            <dt>district:</dt>
+            <dd>{{item.DISTRICT}}</dd>
+            <dt>Address:</dt>
+            <dd>{{item.ADDRESS}}</dd>
+            <dt>PH:</dt>
+            <dd>{{item.CONTACT}}</dd>
+        </dl>
+
+        <p>
+          <a href="#">{{item.BANK}}</a> having branch
+          <a href="job-details.html"> {{item.BRANCH}} </a> with IFSC Code <a href="">{{item.IFSC}}</a>
           <span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> {{item.STATE}} </span> <span class="date"><i class=" icon-clock"> </i>/{{item.DISTRICT}}</span></span>
-          <h4>
             <small>
             {{item.ADDRESS}} {{item.CITY}}
            </small>
-         </h4>
-          <div class="job-actions">
-            <h6><strong>PH: </strong>{{item.CONTACT}}</h6>
-          </div>
-         </div>
-        </div>
+          <strong>PH: </strong>{{item.CONTACT}}
+        </p>
+
+       </div>
       </div>
     </div>
-
+  </div>
     </ng-template>
 
     <div class="explore-list col-md-3 col-sm-12">
@@ -61,21 +84,4 @@
         {{bnk}}
       </div>
     </div>
-
-    <!--  <div class="grid grid-pad">
-        <div *ngFor="let detail of details"  class="col-1-4">
-          <h4>BRANCH: {{detail.BRANCH}}</h4>
-          <h4>CITY: {{detail.CITY}}</h4>
-          <h4>IFSC CODE: {{detail.IFSC}}</h4>
-          <h4>MICR CODE: {{detail.MICRCODE}}</h4>
-          <h4>ADDRESS: {{detail.ADDRESS}}</h4>
-          <h4>CONTACT: {{detail.CONTACT}}</h4>
-
-        </div>
-      </div> -->
-
-
-
-  </div>
-
 </div>

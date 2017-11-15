@@ -7,7 +7,7 @@ const FIRST_PAGE: number = 1;
 @Component({
   selector: 'bank-item',
   templateUrl: './banks.component.html',
-  styleUrls: ['../app.component.css','./banks.component.css'],
+  styleUrls: ['../app.component.css','./banks.component.scss'],
   providers: [
     IfscServices
   ],
@@ -65,13 +65,12 @@ export class BanksComponent implements OnInit {
             this.ifscServices.getStatesByBank(bankName)
             .subscribe(banks => { this.banks = banks});
             this.page = 'states';
-            this.currentBank = bankName;
           }else{
              this.ifscServices.getBanksList()
              .subscribe(banks => { this.banks = banks});
              this.page = 'banks';
-
           }
+          this.currentBank = bankName;
 
         });
 

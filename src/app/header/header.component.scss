@@ -1,0 +1,83 @@
+.navbar{
+  margin-bottom: 0px;
+}
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 767px) {
+  .cus-nav{
+    .collapse{
+      display: block;
+    }
+    .navbar-header {
+      text-align: center;
+      .navbar-toggle{
+        display: none;
+      }
+      .navbar-brand{
+        display: block;
+        float: none;
+      }
+    }
+
+    .navbar-collapse{
+
+      .nav{
+        display: inline-flex;
+        li{
+          display: flex;
+          a{
+          //  font-size: 20px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+          border-left: solid 1px #ccc;
+          &:first-child{
+            border-left: none;
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+ }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .cus-nav1{
+    .collapse{
+      display: none;
+    }
+    .navbar-collapse{
+      .nav{
+        li{
+          a{
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+    // background-color: #000;
+  }
+
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+ }

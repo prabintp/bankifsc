@@ -5,7 +5,7 @@ import { jsonData, ComponentDataService } from '../common/services/component.dat
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../app.component.css','./header.component.css'],
+  styleUrls: ['../app.component.css','./header.component.scss'],
   //directives: [ROUTER_DIRECTIVES],
   providers: [
     ComponentDataService,

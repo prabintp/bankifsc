@@ -95,9 +95,7 @@ h4 {
 .sitem{
   padding: 10px;
   margin: 5px 0;
-  border: 1px solid #eee;
-  border-left-width: 5px;
-  border-radius: 3px;
+
 }
 .sround {
     width: 100px;
@@ -107,21 +105,8 @@ h4 {
     float: left;
     width: 60px;
     height: 60px;
-    margin: 0 5px;
+
     padding: 10px;
     border-radius: 3px;
     font-size: 30px;
-    margin-top:10px;
-}
-.pad-b8{
-  padding-bottom: 8px;
-}
-.pad-b16{
-  padding-bottom: 16px;
-}
-.mar-b8{
-  margin-bottom: 8px;
-}
-.mar-b16{
-  margin-bottom: 16px;
 }
