@@ -1,0 +1,17 @@
+#footer {
+    margin-top: 5em;
+    background-color: #EAF5F4;
+    padding: 15px 0px;
+    .float-lg-right {
+      float: right !important;
+    }
+    li {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+    }
+    p {
+    clear: left;
+    margin-bottom: 0;
+    }
+}

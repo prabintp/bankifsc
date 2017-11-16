@@ -10,13 +10,19 @@ import { SearchFormComponent } from './search/search-form/search-form.component'
 import { GridcontainerComponent } from './gridcontainer/gridcontainer.component';
 import { HeaderComponent } from './header/header.component';
 import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
+import { AvatharPipe } from './common/pipe/avathar.pipe';
+import { FooterComponent } from './footer/footer.component';
+import { DescDetailsComponent } from './desc-details/desc-details.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent, SearchFormComponent, GridcontainerComponent, HeaderComponent,
-     routableComponents
+     routableComponents,
+     AvatharPipe,
+     FooterComponent,
+     DescDetailsComponent
 
   ],
 

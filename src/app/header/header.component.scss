@@ -1,5 +1,8 @@
 .navbar{
   margin-bottom: 0px;
+  .navbar-brand{
+    padding-top: 0px;
+  }
 }
 
 
@@ -18,6 +21,7 @@
       .navbar-brand{
         display: block;
         float: none;
+        padding-top: 0px;
       }
     }
 

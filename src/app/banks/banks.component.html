@@ -2,7 +2,7 @@
   <div class="container-fluid text-center">
 
     <div class="row">
-        <h1>abc dnfndsndnfkf  dfkjdkfdf </h1>
+        <h2 class="search-head">Search by bank IFSC/Branch ...</h2>
      <div class="search-formdir col-xs-12 col-md-6 col-md-offset-3" [query]="query"
     (onSearchSubmit)="onSearchSubmit($event)">
     </div>
@@ -33,6 +33,7 @@
          {{bnk}}
        </div>
      </div>
+       <app-desc-details></app-desc-details>
     </div>
 
     <ng-template #detailsblock>
@@ -40,7 +41,7 @@
     <div class="col-md-9 col-sm-12">
       <div class="item-list row" *ngFor="let item of details">
        <div class="col-sm-2  col-xs-12">
-        <div class="add-image sround btn btn-info"><a href="#" >FB</a></div>
+        <div class="add-image sround btn btn-info"><a href="#" >{{item.BANK | avathar}}</a></div>
        </div>
 
        <div class="col-sm-10  col-xs-12">
@@ -79,7 +80,7 @@
   </div>
     </ng-template>
 
-    <div class="explore-list col-md-3 col-sm-12">
+    <div class="explore-list col-md-3 col-sm-12 hidden-xs">
       <div (click)="redirect(bnk,page)" *ngFor="let bnk of banks" class="explore-item tag-item">
         {{bnk}}
       </div>

@@ -6,12 +6,12 @@
     "brandPath": "/dashboard",
     "navMenus": [
       {
-        "name": "banks",
+        "name": "List Banks",
         "path": "banks"
       },
       {
-        "name": "banks",
-        "path": "banks"
+        "name": "About Us",
+        "path": "aboutus"
       }
     ]
   }
