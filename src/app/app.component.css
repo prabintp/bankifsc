@@ -1,3 +1,4 @@
+
 [class*='col-'] {
   float: left;
 }
@@ -113,5 +114,5 @@ h4 {
 .search-head{
   color: #fff;
   padding: 15px 0px;
-  font-family: sans-serif;
+
 }
