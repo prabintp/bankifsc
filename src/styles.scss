@@ -1,3 +1,34 @@
-h1{
-  font-color: #fff;
+
+.sround {
+    width: 100px;
+    height: 100px;
+}
+.sround {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 6px;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 26px;
+}
+.sitem{
+  word-break: break-all;
+}
+
+@media (min-width: 768px) {
+  .sround {
+      float: left;
+      width: 60px;
+      height: 60px;
+
+      padding: 10px;
+      border-radius: 3px;
+      font-size: 30px;
+  }
+  .sitem{
+    padding: 10px;
+    margin: 5px 0;
+
+  }
 }

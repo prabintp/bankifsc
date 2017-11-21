@@ -93,24 +93,7 @@ h4 {
 .dtable{
   display: table;
 }
-.sitem{
-  padding: 10px;
-  margin: 5px 0;
 
-}
-.sround {
-    width: 100px;
-    height: 100px;
-}
-.sround {
-    float: left;
-    width: 60px;
-    height: 60px;
-
-    padding: 10px;
-    border-radius: 3px;
-    font-size: 30px;
-}
 .search-head{
   color: #fff;
   padding: 15px 0px;
