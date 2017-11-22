@@ -11,8 +11,6 @@ const FIRST_PAGE: number = 1;
   providers: [
     IfscServices
   ],
-//  declarations: [GridcontainerComponent, SearchFormComponent],
-//  pipes: [BookFilterPipe],
 })
 export class BanksComponent implements OnInit {
   constructor(
@@ -79,12 +77,12 @@ export class BanksComponent implements OnInit {
  onSearchSubmit(qry: String) {
       this.query = qry;
        console.log(qry+'login data');
+     if(qry){
+       this.router.navigate(['search'],{ queryParams: {qry: qry, page: FIRST_PAGE} });
+     }
 
-     this.router.navigate(['search'],{ queryParams: {qry: qry, page: FIRST_PAGE} });
  }
 
   title = 'Get ';
-
-
 
 }

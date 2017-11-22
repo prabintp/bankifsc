@@ -15,19 +15,19 @@
 
       <div class="item-list sitem row" *ngFor="let item of results">
        <div class="col-sm-2  col-xs-2">
-        <div class="add-image sround btn btn-info"><a href="#" >{{item.BRANCH | avathar}}</a></div>
+        <div class="add-image sround btn btn-info"><a routerLink="/banks/{{item.BANK}}/{{item.STATE}}/{{item.DISTRICT}}/{{item.BRANCH}}" >{{item.BRANCH | avathar}}</a></div>
        </div>
        <div class="col-sm-10  col-xs-10  desc-box">
-        <div class="add-details jobs-item">
-          <h5 class="company-title "><a routerLink="/banks/{{item.BANK}}">{{item.BANK}}</a></h5>
-          <h4 class="job-title"><a href="job-details.html"> {{item.BRANCH}} </a> branch with IFSC Code <a href="">{{item.IFSC}}</a></h4>
-          <span class="info-row"> <span class="item-location"><i class="fa fa-map-marker"></i> {{item.STATE}} </span> <span class="date"><i class=" icon-clock"> </i>/{{item.DISTRICT}}</span></span>
+        <div>
+          <h5><a routerLink="/banks/{{item.BANK}}">{{item.BANK}}</a></h5>
+          <h4><a routerLink="/banks/{{item.BANK}}/{{item.STATE}}/{{item.DISTRICT}}/{{item.BRANCH}}"> {{item.BRANCH}} </a> branch with IFSC Code <a href="">{{item.IFSC}}</a></h4>
+          <span> <a routerLink="/banks/{{item.BANK}}/{{item.STATE}}"> {{item.STATE}} </a>/<a routerLink="/banks/{{item.BANK}}/{{item.STATE}}/{{item.DISTRICT}}">{{item.DISTRICT}}</a></span>
           <h4>
             <small>
             {{item.ADDRESS}} {{item.CITY}}
            </small>
          </h4>
-          <div class="job-actions">
+          <div>
             <h6><strong>PH: </strong>{{item.CONTACT}}</h6>
           </div>
          </div>
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 col-xs-12">
+    <div class="col-md-3 col-xs-12 align-center">
         <img src="http://via.placeholder.com/232x337" class="img-responsive" alt="Responsive image">
     </div>
   </div>
