@@ -14,6 +14,9 @@ import { AvatharPipe } from './common/pipe/avathar.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { DescDetailsComponent } from './desc-details/desc-details.component';
 
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+
 
 
 @NgModule({
@@ -31,7 +34,8 @@ import { DescDetailsComponent } from './desc-details/desc-details.component';
     appRouterProviders,
     FormsModule,
     HttpModule,
-    Ng2FilterPipeModule
+    Ng2FilterPipeModule,
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
   ],
   providers: [],
   bootstrap: [AppComponent]
