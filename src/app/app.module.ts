@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule} from '@angular/http';
 
-import { Angulartics2Module } from 'angulartics2';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+//import { Angulartics2Module } from 'angulartics2';
+//import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 
 import { AppComponent } from './app.component';

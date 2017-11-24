@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 //import { ROUTER_DIRECTIVES }  from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+// import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 
 @Component({
