@@ -60,6 +60,7 @@ export class BanksComponent implements OnInit {
             this.page = 'districts';
           }
           else if(bankName){
+          //  gtag('config', 'UA-110067074-1', , {'page_path': '/banks/'+bankName});
             this.ifscServices.getStatesByBank(bankName)
             .subscribe(banks => { this.banks = banks});
             this.page = 'states';
