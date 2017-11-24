@@ -11,6 +11,6 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 //  directives: [HeaderComponent],
 })
 export class AppComponent {
-  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {}
+  constructor() {}
   title = 'app';
 }
