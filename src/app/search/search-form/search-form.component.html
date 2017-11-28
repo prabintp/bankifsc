@@ -16,8 +16,11 @@
                 placeholder="search for bank details..."
                  />
           </div>
+
           <div class="col-sm-2">
-          <button  class="btn-lg form-control btn-primary" type="submit" name="search-button">Search</button>
+            <button angulartics2On="click"
+      angularticsAction="Search"
+      [angularticsCategory]="query" class="btn-lg form-control btn-primary" type="submit" name="search-button">Search</button>
         </div>
         </div>
 

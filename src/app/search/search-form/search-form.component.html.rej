@@ -1,0 +1,9 @@
+diff a/src/app/search/search-form/search-form.component.html b/src/app/search/search-form/search-form.component.html	(rejected hunks)
+@@ -19,6 +19,7 @@
+           <div class="col-sm-2">
+           <button angulartics2On="click"
+       angularticsAction="Search"
++      [angularticsCategory]="query" class="btn-lg form-control btn-primary" type="submit" name="search-button">Search</button>
+         </div>
+         </div>
+ 
