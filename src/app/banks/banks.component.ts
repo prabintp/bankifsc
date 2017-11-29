@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { details, banks,IfscServices } from '../common/services/ifsc.api.service';
+import { Title } from '@angular/platform-browser';
 
 const FIRST_PAGE: number = 1;
 
@@ -14,7 +15,10 @@ const FIRST_PAGE: number = 1;
 })
 export class BanksComponent implements OnInit {
   constructor(
-    private ifscServices: IfscServices, private route: ActivatedRoute, private router: Router) {
+    private ifscServices: IfscServices,
+     private route: ActivatedRoute,
+      private router: Router,
+     private titleService: Title) {
   }
 
   redirect(pagename: string, page: string) {
@@ -60,6 +64,7 @@ export class BanksComponent implements OnInit {
             this.page = 'districts';
           }
           else if(bankName){
+            this.titleService.setTitle('bank ifsc details | '+bankName );
           //  gtag('config', 'UA-110067074-1', , {'page_path': '/banks/'+bankName});
             this.ifscServices.getStatesByBank(bankName)
             .subscribe(banks => { this.banks = banks});

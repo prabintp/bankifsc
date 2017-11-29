@@ -16,6 +16,7 @@ import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
 import { AvatharPipe } from './common/pipe/avathar.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { DescDetailsComponent } from './desc-details/desc-details.component';
+import { Title } from '@angular/platform-browser';
 
 
 
@@ -28,6 +29,7 @@ import { DescDetailsComponent } from './desc-details/desc-details.component';
      AvatharPipe,
      FooterComponent,
      DescDetailsComponent
+
 
   ],
 
